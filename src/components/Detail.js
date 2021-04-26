@@ -24,10 +24,10 @@ const Detail=(props)=>{
     return (
         <Container>
             <Background>
-                <img alt="" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/28F85D4A1F7CA135B7B20B3EDB42EDA73196C2A71C52C5400A6C2285F8E071BE/scale?width=1440&aspectRatio=1.78&format=jpeg" />
+                <img alt={detailData.title} src={detailData.backgroundImg} />
             </Background>
             <ImageTitle>
-                <img alt="" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/97BB36F8B9FC053F561894DD7B1C42C4FD20E63560F481CBCB3B9D3600CFCA3B/scale?width=1440&aspectRatio=1.78" />
+                <img alt={detailData.title} src={detailData.titleImg} />
             </ImageTitle>
             <ContentMeta>
                 <Controls>
@@ -50,9 +50,9 @@ const Detail=(props)=>{
                     </GroupWatch>
                 </Controls>
                 <SubTitle>
-                2019 • 53m • Documentary, Biographical, Music
+                  {detailData.subTitle}
                     <Description>
-                    J-Pop band Perfume is featured in this original music and documentary series 'Disney’s My Music Story.' The show features Perfume's life stories, passion for music, Disney memories, and more.
+                      {detailData.description}
                     </Description>
                 </SubTitle>
             </ContentMeta>
