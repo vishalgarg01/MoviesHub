@@ -6,7 +6,7 @@ const NewDisney=(props)=>{
   const movies=useSelector(selectNewDisney);
   return(
     <Container>
-      <h4>New to disney+</h4>
+      <h4>New to MoviesHub </h4>
       <Content>
         {
           movies && movies.map((movie,key)=>(

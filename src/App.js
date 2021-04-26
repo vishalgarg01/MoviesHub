@@ -4,6 +4,8 @@ import Header from './components/Headers';
 import Home from './components/Home';
 import Login from './components/Login';
 import Detail from './components/Detail';
+import Movies from './components/Movies';
+import Original from './components/Original';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route exact path='/' component={Login}/>
           <Route path='/home' component={Home}/>
           <Route path='/detail/:id' component={Detail}/>
+          <Route path='/movies' component={Movies}/>
+          <Route path='/originals' component={Original}/>
         </Switch>
       </Router>
     </div>

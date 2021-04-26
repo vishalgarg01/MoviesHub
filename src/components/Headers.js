@@ -14,7 +14,7 @@ const Header=(props)=>{
     auth.onAuthStateChanged(async (user)=>{
       if(user){
         setUser(user)
-        history.push('/home')
+      //  history.push('/home')
       }
     })
   },[userName])
@@ -54,7 +54,9 @@ const setUser = (user) => {
   return (
       <Nav>
           <Logo>
-              <img src='/images/logo.svg' alt='Disney+'/>
+            <a href='/home'>
+              <img src='/images/unnamed.png' alt='MoviesHub'/>
+            </a>
           </Logo>
 
           {
@@ -75,11 +77,11 @@ const setUser = (user) => {
                   <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
                   <span>WATCHLIST</span>
                 </a>
-                <a>
+                <a href='/originals'>
                   <img src="/images/original-icon.svg" alt="ORIGINALS" />
                   <span>ORIGINALS</span>
                 </a>
-                <a>
+                <a href='/movies'>
                   <img src="/images/movie-icon.svg" alt="MOVIES" />
                   <span>MOVIES</span>
                 </a>
@@ -116,14 +118,15 @@ z-index:3;
 `;
 const Logo = styled.a`
 padding: 0;
-width: 80px;
+width: 70px;
 margin-top: 4px;
-max-height: 70px;
+max-height: 100px;
 font-size: 0;
 display: inline-block;
 img {
   display: block;
   width: 100%;
+  border-radius:50%;
 }
 `;
 const NavMenu = styled.div`
